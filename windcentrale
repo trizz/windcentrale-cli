@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+require __DIR__.'/vendor/autoload.php';
+
+use NunoMaduro\Collision\Provider as CollisionProvider;
+use trizz\WindcentraleApi\WindcentraleCliApplication;
+
+if (class_exists(CollisionProvider::class)) {
+    (new CollisionProvider)->register();
+}
+
+define('REQUEST_TIME', time());
+
+(new WindcentraleCliApplication())->run();

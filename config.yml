@@ -1,0 +1,48 @@
+# The Windcentrale API URLs.
+urls:
+  production: https://zep-api.windcentrale.nl/production/%d
+  mill_data: https://zep-api.windcentrale.nl/production/%d/live
+
+# Settings for the InfluxDB export. All default, except the 'database_name'.
+influx:
+  databse_name: windcentrale
+  host: localhost
+  port: 8086
+  username:
+  password:
+  ssl: false
+  verifySsl: false
+  timeout: 0
+
+# The different Windcentrale windmills.
+mills:
+  - id: 1
+    name: De Grote Geert
+    slug: grotegeert
+  - id: 2
+    name: De Jonge Held
+    slug: jongeheld
+  - id: 31
+    name: Het Rode Hert
+    slug: rodehert
+  - id: 41
+    name: De Ranke Zwaan
+    slug: rankezwaan
+  - id: 51
+    name: De Witte Juffer
+    slug: wittejuffer
+  - id: 111
+    name: De Bonte Hen
+    slug: bontehen
+  - id: 121
+    name: De Trouwe Wachter
+    slug: trouwewachter
+  - id: 131
+    name: De Blauwe Reiger
+    slug: blauwereiger
+  - id: 141
+    name: De Vier Winden
+    slug: vierwinden
+  - id: 191
+    name: De Boeren Zwaluw
+    slug: boerenzwaluw
