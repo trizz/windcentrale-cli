@@ -45,3 +45,7 @@ $windcentraleApi = new \trizz\WindcentraleApi\Windcentrale($settings);
 // Mill ID 2 is 'De Jonge Held'.
 $data = $windcentraleApi->getProductionData(2);
 ```
+
+## Thanks
+Parts of the Windcentrale API code is based on the original Perl script made by [damonnk](https://github.com/damonnk/windcentrale).
+It provided a great starting point for creating this code.
