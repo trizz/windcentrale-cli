@@ -37,6 +37,9 @@ used topics are `windcentale/{mill-slug}/production` and `windcentale/{mill-slug
 `windcentrale/jongeheld/production`). The body of the message contains the same output JSON output as the `production`
 and `mill_data` commands.
 
+In order to use the MQTT daemon, the [Mosquitto PHP Wrapper](https://github.com/mgdm/Mosquitto-PHP#mosquitto-php) must
+be installed.
+
 ## Using the Windcentrale API Class
 To use the Windcentrale API class to get the requested data as a [Collection](https://laravel.com/docs/5.5/collections) to use
 in your own scripts, you can create a new instance of `trizz\WindcentraleApi\Windcentrale`. At this moment a Collection must be
