@@ -53,6 +53,11 @@ $windcentraleApi = new \trizz\WindcentraleApi\Windcentrale($settings);
 $data = $windcentraleApi->getProductionData(2);
 ```
 
+## Developing
+You can use [Vagrant](https://www.vagrantup.com/) (`vagrant up`) to start a VM containing all necessary
+dependencies to run all possible commands. You can access Grafana at http://192.168.20.20:3000 with username/password
+`admin`. 
+
 ## Thanks
 Parts of the Windcentrale API code is based on the original Perl script made by [damonnk](https://github.com/damonnk/windcentrale).
 It provided a great starting point for creating this code.
