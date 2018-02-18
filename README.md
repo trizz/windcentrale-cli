@@ -30,6 +30,13 @@ automate the process of reading the data.
 
 For example `./windcentrale production jongeheld --export=json` will output the production data in a JSON string.
 
+## MQTT Daemon
+When running `./windcentrale mqtt-daemon jongeheld` a long running process is started that will publish two messages
+to the configured MQTT Broker every five seconds, one with the mill data and one with te production per windshare. The
+used topics are `windcentale/{mill-slug}/production` and `windcentale/{mill-slug}/mill` (for example: 
+`windcentrale/jongeheld/production`). The body of the message contains the same output JSON output as the `production`
+and `mill_data` commands.
+
 ## Using the Windcentrale API Class
 To use the Windcentrale API class to get the requested data as a [Collection](https://laravel.com/docs/5.5/collections) to use
 in your own scripts, you can create a new instance of `trizz\WindcentraleApi\Windcentrale`. At this moment a Collection must be

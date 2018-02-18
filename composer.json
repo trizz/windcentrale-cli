@@ -17,7 +17,8 @@
         "influxdb/influxdb-php": "^1.14",
         "symfony/console": "^3.3",
         "symfony/yaml": "^3.3",
-        "tightenco/collect": "^5.5"
+        "tightenco/collect": "^5.5",
+        "react/event-loop": "^0.4.3"
     },
     "require-dev": {
         "symfony/var-dumper": "^3.3",
