@@ -26,6 +26,10 @@ mqtt:
   topic_mill: windcentrale_test/$slug$/mill
   topic_status: windcentrale_test/$slug$/status
 
+dsmr_reader:
+  url: http://dsmr.url
+  api_key: API-TOKEN
+
 # The different Windcentrale windmills.
 mills:
   - id: 1

@@ -7,6 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Yaml\Yaml;
+use trizz\WindcentraleApi\Commands\Daemon;
 use trizz\WindcentraleApi\Commands\MqttDaemon;
 use trizz\WindcentraleApi\Commands\Details;
 use trizz\WindcentraleApi\Commands\MillData;
@@ -33,7 +34,7 @@ class WindcentraleCliApplication extends Application
             new MillData($config),
             new Details($config),
             new Mills($config),
-            new MqttDaemon($config),
+            new Daemon($config),
         ]);
     }
 

@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## Breaking
+- The 'standalone' MQTT daemon is removed. Use `./windcentrale daemon {mill} mqtt` instead.
+
+## Added
+- Possibility to add multiple 'daemons'.
+- The DSMR Reader daemon.
 
 ## [1.0.0] - 2018-02-18
 - Initial version.
