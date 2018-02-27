@@ -13,16 +13,23 @@ class DsmrReaderDaemon extends AbstractDaemon
      */
     private $template;
 
+    /**
+     * @var string The timestamp of the last sent message.
+     */
     private $lastTimestamp;
 
+    /**
+     * @var string The full DSMR Reader API URL.
+     */
     private $url;
 
+    /**
+     * @var string The API key.
+     */
     private $apiKey;
 
     /**
-     * Setup a connection to the configured MQTT broker.
-     *
-     * @throws \RuntimeException
+     * Setup the daemon.
      */
     public function initialize() : void
     {
@@ -41,12 +48,13 @@ class DsmrReaderDaemon extends AbstractDaemon
     }
 
     /**
-     * Publish the data to the specified topics.
+     * Publish the data.
      */
     public function tick() : void
     {
         $timestamp = $this->millData['timestamp'].'+0'.(1 + date('I'));
 
+        // Don't send anything if the timestamp is the same as in the previous tick.
         if ($timestamp === $this->lastTimestamp) {
             return;
         }
