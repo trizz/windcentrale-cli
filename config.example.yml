@@ -22,6 +22,9 @@ mqtt:
   password:
   client_id: windcentrale
   certificate_ca_path: /etc/ssl/certs/ca-certificates.crt
+  topic_production: windcentrale_test/$slug$/production
+  topic_mill: windcentrale_test/$slug$/mill
+  topic_status: windcentrale_test/$slug$/status
 
 # The different Windcentrale windmills.
 mills:
